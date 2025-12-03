@@ -1,0 +1,193 @@
+/* --- Setup Font (Sesuaikan path jika perlu) --- */
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('assets/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: url('assets/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222; /* Background luar HP */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+/* --- Mobile Container (Bingkai HP) --- */
+.mobile-container {
+    width: 100%;
+    max-width: 414px; /* Lebar standar iPhone modern */
+    height: 896px;    /* Tinggi standar iPhone modern */
+    background-color: #fff;
+    position: relative;
+    overflow: hidden; /* Memotong elemen yang keluar bingkai */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    /* Opsional: border radius untuk bingkai HP */
+    /* border-radius: 40px; */ 
+}
+
+/* --- Background Section --- */
+.bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%; /* Menempati 65% area atas */
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa gepeng */
+    object-position: center bottom; /* Fokus ke bagian bawah gedung */
+}
+
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient halus agar teks putih lebih terbaca di atas langit */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.6) 100%);
+}
+
+/* --- Content Wrapper --- */
+.content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Mendorong konten ke bawah */
+    z-index: 10;
+}
+
+/* --- Teks "Welcome!" --- */
+.text-welcome {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+    font-size: 3.8rem;
+    color: #FFFFFF;
+    padding-left: 35px;
+    margin-bottom: -20px; /* Overlap dengan kartu kuning */
+    z-index: 20; /* Di atas kartu kuning */
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    position: absolute;
+
+    top: 450px;
+    right: 120px;
+}
+
+/* --- Kartu Kuning Bawah --- */
+.bottom-card {
+    position: relative;
+    height: 40%; /* Menempati 40% area bawah */
+    background-color: #FFD141; /* Warna Kuning Utama UNPAR */
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    
+    /* PENTING: Ini memotong gambar tekstur yang keluar dari area kartu */
+    overflow: hidden; 
+}
+
+/* --- Dekorasi Tekstur (PERBAIKAN DISINI) --- */
+.wave-decoration {
+    position: absolute;
+    /* Posisi diatur negatif agar terpotong di pojok kanan atas */
+    top: -140px;
+    left: 0px;  
+    right: -110px;
+    
+    /* Ukuran dibuat besar agar bentuk organiknya terlihat pas saat terpotong */
+    width: 500px;
+    height: 500px;
+    
+    
+    background-image: url('assets/texture-wave.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1; 
+    
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.text-app-name {
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 1.15;
+    color: #FFFFFF;
+}
+
+.logo {
+    position: absolute;
+    bottom: -20px;
+    right: -50px;
+    width: 65px;
+    height: auto;
+}
+/* --- ANIMASI HOVER PROFESIONAL --- */
+
+/* 1. Setup Transisi pada Container Kartu */
+.parking-card {
+    cursor: pointer; /* Mengubah kursor jadi telunjuk */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 2. Efek saat Mouse Hover di Kartu */
+.parking-card:hover {
+    transform: translateY(-10px); /* Naik ke atas 10px */
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.2); /* Bayangan membesar dan melembut */
+}
+
+/* 3. Setup Transisi pada Gambar di dalam Kartu */
+.parking-card .card-image img {
+    transition: transform 0.6s ease; /* Durasi lebih lama agar zoom terasa smooth */
+}
+
+/* 4. Efek Zoom Gambar saat Kartu di-Hover */
+.parking-card:hover .card-image img {
+    transform: scale(1.08); /* Gambar membesar 8% */
+}
+
+/* 5. Efek Klik (Active State) - Agar terasa responsif saat ditekan */
+.parking-card:active {
+    transform: translateY(-2px); /* Turun sedikit saat diklik */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Bayangan mengecil */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Transisi cepat */
+}
+@media screen and (max-width: 480px) {
+    .mobile-container {
+        height: 100vh;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    /* Penyesuaian ukuran font di layar kecil */
+    .text-welcome { font-size: 3.2rem; }
+    .text-app-name { font-size: 2.4rem; }
+}

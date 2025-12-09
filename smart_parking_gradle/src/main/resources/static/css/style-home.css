@@ -1,0 +1,212 @@
+/* --- Setup Font --- */
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('assets/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: url('assets/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+/* --- Mobile Container --- */
+.mobile-container {
+    position: relative;
+    width: 100%;
+    max-width: 414px;
+    height: 896px;
+    background-color: #FFD141; /* Warna Kuning Utama */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Dekorasi Background (Waves) - UPDATE UTAMA --- */
+.wave-decoration {
+    position: absolute;
+    background-image: url('assets/texture-wave.png');
+    background-repeat: no-repeat;
+    /* Menggunakan opacity rendah agar terlihat seperti watermark tekstur */
+    opacity: 0.4; 
+    z-index: 1; /* Di belakang konten */
+    pointer-events: none;
+}
+
+/* Wave Kanan Atas (Menempel sisi kanan dan atas) */
+.top-right {
+    top: -50px;    /* Sedikit ditarik ke atas agar tidak terlalu tajam */
+    right: -80px;  /* Menempel ke kanan */
+    width: 400px;  /* Ukuran besar */
+    height: 400px;
+    background-size: contain;
+    transform: rotate(10deg); /* Rotasi sedikit agar flow-nya enak */
+}
+
+/* Wave Kiri Bawah (Menempel sisi kiri dan bawah) */
+.bottom-left {
+    bottom: -20px; /* Menempel bawah */
+    left: -100px;  /* Menempel kiri */
+    width: 550px;  /* Lebih besar untuk mengisi area bawah */
+    height: 550px;
+    background-size: contain;
+    /* Memutar gambar agar lengkungannya pas menutup pojok kiri bawah */
+    transform: rotate(160deg) scaleX(-1); 
+}
+
+/* --- Header Title --- */
+.page-title {
+    position: relative;
+    z-index: 10;
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-top: 60px;
+    margin-left: 30px;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- Cards Container --- */
+.cards-container {
+    position: relative;
+    z-index: 10;
+    flex: 1;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Sedikit renggang agar lega */
+}
+
+/* --- Parking Card Style --- */
+.parking-card {
+    width: 100%;
+    height: 230px; /* Sedikit dipertinggi agar proporsional */
+    background-color: #fff;
+    border-radius: 24px; /* Sudut lebih bulat modern */
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    
+    /* Setup Animasi Smooth */
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateZ(0); /* Hardware acceleration */
+}
+
+.card-image {
+    width: 100%;
+    height: 68%; /* Gambar lebih dominan */
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* Info Bar Bawah (Orange) */
+.card-info {
+    height: 32%;
+    background-color: #F1A33B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.building-name {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
+
+.availability {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 0.95rem;
+    color: #FFFFFF;
+    opacity: 0.95;
+}
+
+/* --- ANIMASI HOVER PROFESIONAL --- */
+.parking-card:hover {
+    /* Kartu naik ke atas dengan mantap */
+    transform: translateY(-12px); 
+    /* Shadow menjadi soft dan menyebar ke bawah */
+    box-shadow: 0 30px 40px rgba(181, 126, 6, 0.25); 
+}
+
+.parking-card:hover .card-image img {
+    /* Zoom in gambar perlahan */
+    transform: scale(1.1); 
+}
+
+/* Efek Klik */
+.parking-card:active {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    transition: 0.1s ease-out;
+}
+
+/* --- Footer --- */
+.footer {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(229, 155, 59, 0.95); /* Orange sedikit lebih gelap dari kartu */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin-top: auto; /* Push ke bawah */
+}
+
+/* Logo UNPAR Horizontal */
+.footer-logo {
+    width: 112px; /* Ukuran pas untuk wordmark horizontal */
+    height: 35px;
+    object-fit: contain;
+}
+
+.copyright {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 0.65rem;
+    color: #724c06; /* Coklat tua agar kontras di background orange */
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* --- Responsif --- */
+@media screen and (max-width: 480px) {
+    .mobile-container {
+        height: 100vh;
+        max-width: 100%;
+        border-radius: 0;
+    }
+}

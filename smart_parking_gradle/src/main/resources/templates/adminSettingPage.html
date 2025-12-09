@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPAG B2</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styleAdmin.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="back-button"></div>
+        </div>
+
+        <div class="container">
+            <div class="title">
+                <div class="title-small">PPAG</div>
+                <div class="title-large">B2</div>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="interval">Interval pengiriman data (dalam detik)</label>
+                    <input type="number" id="interval" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="jarak">Jarak batas mobil (dalam cm)</label>
+                    <input type="number" id="jarak" value="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat base station</label>
+                    <input type="text" id="alamat" value="167.67.67.67">
+                </div>
+
+                <button type="submit" class="save-button">Save</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <div class="footer-logo">
+                <div class="logo-circle">UK</div>
+                <div class="footer-text">
+                    <span class="footer-text-top">UNIVERSITAS<br>KATOLIK<br>PARAHYANGAN</span>
+                </div>
+            </div>
+            <div class="copyright">© Copyright 2025 – IoT</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Data tersimpan!');
+        });
+
+        document.querySelector('.back-button').addEventListener('click', function() {
+            window.history.back();
+        });
+    </script>
+</body>
+</html>

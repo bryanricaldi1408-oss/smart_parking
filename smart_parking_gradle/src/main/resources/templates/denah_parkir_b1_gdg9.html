@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denah Parkir Gedung 9 B1</title>
+    <link rel="stylesheet" href="../css/denah_parkir_b1_gdg9.css">
+    <script src="../js/denah_parkir_b1_gdg9.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <button class="back-btn">&#8592;</button>
+        <div class="header-title">Lantai Parkir</div>
+    </div>
+
+    <div class="map-container" id="mapContainer">
+        <div class="map-wrapper" id="mapWrapper">
+            <div class="parking-map">
+                <!-- Top Section - 4 spots -->
+                <div class="top-section">
+                    <div class="parking-spot occupied">A1</div>
+                    <div class="parking-spot occupied">A2</div>
+                    <div class="parking-spot occupied">A3</div>
+                </div>
+
+                <!-- Middle Section - Row 1 -->
+                <div class="middle-section">
+                    <div class="middle-row">
+                        <div class="parking-spot occupied">B1</div>
+                        <div class="parking-spot occupied">B2</div>
+                        <div class="parking-spot occupied">B3</div>
+                    </div>
+                    <div class="spacer-small"></div>
+                    <div class="middle-row">
+                        <div class="parking-spot occupied">C1</div>
+                        <div class="parking-spot occupied">C2</div>
+                        <div class="parking-spot occupied">C3</div>
+                    </div>
+                    <div class="spacer-medium"></div>
+                    <div class="middle-row">
+                        <div class="parking-spot occupied">D1</div>
+                        <div class="parking-spot occupied">D2</div>
+                        <div class="parking-spot occupied">D3</div>
+                    </div>
+                    <div class="spacer-large"></div>
+                    <div class="middle-row">
+                        <div class="parking-spot occupied">E1</div>
+                        <div class="parking-spot occupied">E2</div>
+                        <div class="parking-spot occupied">E3</div>
+                    </div>
+                </div>
+
+                <!-- Bottom Section -->
+                <div class="bottom-section">
+                    <!-- Bottom Row 1 -->
+                    <div class="bottom-row-1">
+                        <div class="middle-row">
+                            <div class="parking-spot occupied">F1</div>
+                            <div class="parking-spot occupied">F2</div>
+                            <div class="parking-spot occupied">F3</div>
+                        </div>
+                        <div class="spacer-small"></div>
+                        <div class="middle-row">
+                            <div class="parking-spot occupied">G1</div>
+                            <div class="parking-spot occupied">G2</div>
+                            <div class="parking-spot occupied">G3</div>
+                        </div>
+                        <div class="spacer-medium"></div>
+                        <div class="middle-row">
+                            <div class="parking-spot occupied">H1</div>
+                            <div class="parking-spot occupied">H2</div>
+                            <div class="parking-spot occupied">H3</div>
+                        </div>
+                        <div class="spacer-large"></div>
+                        <div class="middle-row">
+                            <div class="parking-spot occupied">I1</div>
+                            <div class="parking-spot occupied">I2</div>
+                            <div class="parking-spot occupied">I3</div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Row 2 -->
+                    <div class="bottom-row-2">
+                        
+                        <div class="spacer-medium"></div>
+                        <div class="spacer-medium"></div>
+                        <div class="spacer-large"></div>
+                        <div class="spacer-large"></div>
+                        <div class="spacer-small"></div>
+                        <div class="spacer-small"></div>
+                        <div class="middle-row">
+                            <div class="parking-spot occupied">K1</div>
+                            <div class="parking-spot occupied">K2</div>
+                            <div class="parking-spot occupied">K3</div>
+                            <div class="parking-spot occupied">K4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-controls">
+        <div class="floor-selector">
+            <h2>B1</h2>
+            <p>Basement</p>
+            <button class="floor-dropdown">
+                <span>B1</span>
+                <span>&#9650;</span>
+            </button>
+        </div>
+
+        <div class="legend-controls">
+            <div class="legend">
+                <div class="legend-item occupied-legend">
+                    <div class="legend-box occupied"></div>
+                    <span>Occupied</span>
+                </div>
+                <div class="legend-item empty-legend">
+                    <div class="legend-box empty"></div>
+                    <span>Empty</span>
+                </div>
+                <div class="legend-item offline-legend">
+                    <span>Offline</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

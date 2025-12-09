@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Parking UNPAR - Basement</title>
-    <link rel="stylesheet" href="style-home.css">
+    <link rel="stylesheet" href="/css/styleHomePage.css">
 </head>
+
 <body>
 
     <div class="mobile-container">
-        
+
         <div class="wave-decoration top-right"></div>
         <div class="wave-decoration bottom-left"></div>
 
         <h1 class="page-title">Basement</h1>
 
         <div class="cards-container">
-            
-            <div class="parking-card">
-                <div class="card-image">
-                    <img src="assets/ppag.png" alt="Gedung PPAG">
-                </div>
-                <div class="card-info">
-                    <h2 class="building-name">PPAG</h2>
-                    <span class="availability">36 Available</span>
-                </div>
-            </div>
 
-            <div class="parking-card">
-                <div class="card-image">
-                    <img src="assets/gedung9.png" alt="Gedung 9">
+            <a th:href="@{/denah/ppag}" class="card-link">
+                <div class="parking-card">
+                    <div class="card-image">
+                        <img th:src="@{/assets/ppag.png}" alt="Gedung PPAG">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="building-name">PPAG</h2>
+                        <span class="availability">36 Available</span>
+                    </div>
                 </div>
-                <div class="card-info">
-                    <h2 class="building-name">Ged. 9</h2>
-                    <span class="availability">40 Available</span>
+            </a>
+
+            <a th:href="@{/denah/gedung-9}" class="card-link">
+                <div class="parking-card">
+                    <div class="card-image">
+                        <img th:src="@{/assets/gedung9.png}" alt="Gedung 9">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="building-name">Ged. 9</h2>
+                        <span class="availability">40 Available</span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
         </div>
 
         <footer class="footer">
-            <img src="assets/logo-unpar-white.png" alt="UNPAR" class="footer-logo">
-            
+            <img src="/assets/logo-unpar-white.png" alt="UNPAR" class="footer-logo">
+
             <div class="copyright">
                 © Copyright 2025 - IoT
             </div>
@@ -50,4 +56,5 @@
     </div>
 
 </body>
+
 </html>

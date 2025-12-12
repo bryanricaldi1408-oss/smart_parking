@@ -8,7 +8,7 @@ ws.onmessage = (event) => {
     const parts = data.topic.split("/");
 
     const gedung = parts[0];  // ged9 atau ppag
-    const lantai  = parts[1]; // b1 / b2 / b3
+    const lantai = parts[1]; // b1 / b2 / b3
     const slotKey = parts[2]; // a1, b2, c3
 
     // Payload is the distance
@@ -22,12 +22,12 @@ ws.onmessage = (event) => {
     if (!el) return;
 
     // Reset class lama
-    el.classList.remove("occupied", "available", "empty");
+    el.classList.remove("occupied", "empty");
 
     // Update status slot based on distance
     if (distance < 200) {
         el.classList.add("occupied");
     } else {
-        el.classList.add("available");
+        el.classList.add("empty");
     }
 };

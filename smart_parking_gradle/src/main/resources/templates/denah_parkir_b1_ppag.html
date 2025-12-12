@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denah Parkir B1</title>
+    <script src="/js/denah_parkir_b2_ppag.js" defer></script>
+    <script src="/js/mqtt.js" defer></script>
+    <link href="/css/denah_parkir_b2_ppag.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <button class="back-btn" onclick="window.location.href='/home/'">&#8592;</button>
+        <div class="header-title">Lantai Parkir</div>
+    </div>
+
+    <div class="map-container" id="mapContainer">
+        <div class="map-wrapper" id="mapWrapper">
+            <div class="parking-map">
+                <!-- Top Section -->
+                <div class="top-section">
+                    <div class="parking-row">
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b1">B1</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b2">B2</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b3">B3</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b4">B4</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b5">B5</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b6">B6</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b7">B7</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b8">B8</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b9">B9</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b10">B10</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b11">B11</div>
+                    </div>
+                </div>
+
+                <!-- Middle Section -->
+                <div class="middle-section">
+                    <div class="left-labels">
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a1">A1</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a2">A2</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a3">A3</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a4">A4</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a5">A5</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a6">A6</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a7">A7</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a8">A8</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a9">A9</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a10">A10</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a11">A11</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a12">A12</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a13">A13</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a14">A14</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a15">A15</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a16">A16</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a17">A17</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a18">A18</div>
+                        <div class="label-spot" data-gedung="ppag" data-lantai="b1" data-slot="a19">A19</div>
+                    </div>
+
+                    <div class="center-content">
+                        <div class="parking-row">
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b12">B12</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b13">B13</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b14">B14</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b15">B15</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b16">B16</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b17">B17</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b18">B18</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b19">B19</div>
+                        </div>
+
+                        <div class="parking-row">
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b20">B20</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b21">B21</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b22">B22</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b23">B23</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b24">B24</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b25">B25</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b26">B26</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="b27">B27</div>
+                        </div>
+
+                        <div class="center-blocks">
+                            <div class="block">
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e1">E1</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e2">E2</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e3">E3</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e4">E4</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e5">E5</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e6">E6</div>
+                            </div>
+                            <div class="block">
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f1">F1</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f2">F2</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f3">F3</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f4">F4</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f5">F5</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f6">F6</div>
+                            </div>
+                        </div>
+
+                        <div class="striped-area"></div>
+
+                        <div class="center-blocks">
+                            <div class="block">
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e7">E7</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e8">E8</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e9">E9</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e10">E10</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e11">E11</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="e12">E12</div>
+                            </div>
+                            <div class="block">
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f7">F7</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f8">F8</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f9">F9</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f10">F10</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f11">F11</div>
+                                <div class="parking-spot horizontal" data-gedung="ppag" data-lantai="b1" data-slot="f12">F12</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Section -->
+                <div class="bottom-section">
+                    <div class="bottom-row">
+                        <div class="bottom-left">
+                            <div class="bottom-parking-group">
+                                <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="c1">C1</div>
+                                <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="c2">C2</div>
+                                <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="c3">C3</div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-large-row">
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d1">D1</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d2">D2</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d3">D3</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d4">D4</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d5">D5</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d6">D6</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d7">D7</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d8">D8</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d9">D9</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d10">D10</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d11">D11</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d12">D12</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d13">D13</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d14">D14</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d15">D15</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d16">D16</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d17">D17</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="d18">D18</div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-large-row">
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g1">G1</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g2">G2</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g3">G3</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g4">G4</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g5">G5</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g6">G6</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g7">G7</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g8">G8</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g9">G9</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g10">G10</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g11">G11</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g12">G12</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g13">G13</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g14">G14</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g15">G15</div>
+                        <div class_id="163">
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g16">G16</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g17">G17</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g18">G18</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g19">G19</div>
+                            <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="g20">G20</div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-large-row">
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h1">H1</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h2">H2</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h3">H3</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h4">H4</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h5">H5</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h6">H6</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h7">H7</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h8">H8</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h9">H9</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h10">H10</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h11">H11</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h12">H12</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h13">H13</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h14">H14</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h15">H15</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h16">H16</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h17">H17</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h18">H18</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h19">H19</div>
+                        <div class="parking-spot" data-gedung="ppag" data-lantai="b1" data-slot="h20">H20</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-controls">
+        <div class="floor-selector">
+            <h2>B1</h2>
+            <p>Basement</p>
+            <select class="floor-dropdown">
+                <option value="b1" selected>B1</option>
+                <option value="b2">B2</option>
+                <option value="b3">B3</option>
+            </select>
+        </div>
+
+        <div class="legend-controls">
+            <div class="legend">
+                <div class="legend-item occupied-legend">
+                    <div class="legend-box occupied"></div>
+                    <span>Occupied</span>
+                </div>
+                <div class="legend-item empty-legend">
+                    <div class="legend-box empty"></div>
+                    <span>Empty</span>
+                </div>
+                <div class="legend-item offline-legend">
+                    <span>Offline</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

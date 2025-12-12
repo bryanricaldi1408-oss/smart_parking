@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DenahController {
     @GetMapping("/ppag")
     public String viewDenahPpag(){
-        return "denah_parkir_b2_ppag";
+        return "denah_parkir_b1_ppag";
     }
 
     @GetMapping("/gedung-9") 

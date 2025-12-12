@@ -11,8 +11,8 @@ ws.onmessage = (event) => {
     const lantai  = parts[1]; // b1 / b2 / b3
     const slotKey = parts[2]; // a1, b2, c3
 
-    // Payload format: A1:isi
-    const [slotName, status] = data.mqtt.split(":");
+    // Payload is the distance
+    const distance = parseInt(data.mqtt, 10);
 
     // Query elemen HTML yg cocok
     const selector =
@@ -24,10 +24,10 @@ ws.onmessage = (event) => {
     // Reset class lama
     el.classList.remove("occupied", "available", "empty");
 
-    // Update status slot
-    if (status === "isi") {
+    // Update status slot based on distance
+    if (distance < 200) {
         el.classList.add("occupied");
-    } else if (status === "kosong") {
+    } else {
         el.classList.add("available");
     }
 };

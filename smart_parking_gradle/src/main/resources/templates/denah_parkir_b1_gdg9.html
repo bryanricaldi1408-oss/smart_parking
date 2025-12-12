@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Denah Parkir Gedung 9 B1</title>
-    <link rel="stylesheet" href="css/denah_parkir_b1_gdg9.css">
-    <script src="js/denah_parkir_b1_gdg9.js" defer></script>
+    <link rel="stylesheet" href="/css/denah_parkir_b1_gdg9.css">
+    <script src="/js/denah_parkir_b1_gdg9.js" defer></script>
+    <script src="/js/mqtt.js" defer></script>
 </head>
 <body>
     <div class="header">
-        <button class="back-btn">&#8592;</button>
+        <button class="back-btn" onclick="window.location.href='/home/'">&#8592;</button>
         <div class="header-title">Lantai Parkir</div>
     </div>
 
@@ -18,35 +19,35 @@
             <div class="parking-map">
                 <!-- Top Section - 4 spots -->
                 <div class="top-section">
-                    <div class="parking-spot occupied">A1</div>
-                    <div class="parking-spot occupied">A2</div>
-                    <div class="parking-spot occupied">A3</div>
+                    <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="a1">A1</div>
+                    <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="a2">A2</div>
+                    <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="a3">A3</div>
                 </div>
 
                 <!-- Middle Section - Row 1 -->
                 <div class="middle-section">
                     <div class="middle-row">
-                        <div class="parking-spot occupied">B1</div>
-                        <div class="parking-spot occupied">B2</div>
-                        <div class="parking-spot occupied">B3</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="b1">B1</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="b2">B2</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="b3">B3</div>
                     </div>
                     <div class="spacer-small"></div>
                     <div class="middle-row">
-                        <div class="parking-spot occupied">C1</div>
-                        <div class="parking-spot occupied">C2</div>
-                        <div class="parking-spot occupied">C3</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="c1">C1</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="c2">C2</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="c3">C3</div>
                     </div>
                     <div class="spacer-medium"></div>
                     <div class="middle-row">
-                        <div class="parking-spot occupied">D1</div>
-                        <div class="parking-spot occupied">D2</div>
-                        <div class="parking-spot occupied">D3</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="d1">D1</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="d2">D2</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="d3">D3</div>
                     </div>
                     <div class="spacer-large"></div>
                     <div class="middle-row">
-                        <div class="parking-spot occupied">E1</div>
-                        <div class="parking-spot occupied">E2</div>
-                        <div class="parking-spot occupied">E3</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="e1">E1</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="e2">E2</div>
+                        <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="e3">E3</div>
                     </div>
                 </div>
 
@@ -55,27 +56,27 @@
                     <!-- Bottom Row 1 -->
                     <div class="bottom-row-1">
                         <div class="middle-row">
-                            <div class="parking-spot occupied">F1</div>
-                            <div class="parking-spot occupied">F2</div>
-                            <div class="parking-spot occupied">F3</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="f1">F1</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="f2">F2</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="f3">F3</div>
                         </div>
                         <div class="spacer-small"></div>
                         <div class="middle-row">
-                            <div class="parking-spot occupied">G1</div>
-                            <div class="parking-spot occupied">G2</div>
-                            <div class="parking-spot occupied">G3</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="g1">G1</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="g2">G2</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="g3">G3</div>
                         </div>
                         <div class="spacer-medium"></div>
                         <div class="middle-row">
-                            <div class="parking-spot occupied">H1</div>
-                            <div class="parking-spot occupied">H2</div>
-                            <div class="parking-spot occupied">H3</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="h1">H1</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="h2">H2</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="h3">H3</div>
                         </div>
                         <div class="spacer-large"></div>
                         <div class="middle-row">
-                            <div class="parking-spot occupied">I1</div>
-                            <div class="parking-spot occupied">I2</div>
-                            <div class="parking-spot occupied">I3</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="i1">I1</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="i2">I2</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="i3">I3</div>
                         </div>
                     </div>
 
@@ -89,10 +90,10 @@
                         <div class="spacer-small"></div>
                         <div class="spacer-small"></div>
                         <div class="middle-row">
-                            <div class="parking-spot occupied">K1</div>
-                            <div class="parking-spot occupied">K2</div>
-                            <div class="parking-spot occupied">K3</div>
-                            <div class="parking-spot occupied">K4</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="k1">K1</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="k2">K2</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="k3">K3</div>
+                            <div class="parking-spot" data-gedung="ged9" data-lantai="b1" data-slot="k4">K4</div>
                         </div>
                     </div>
                 </div>
@@ -104,10 +105,11 @@
         <div class="floor-selector">
             <h2>B1</h2>
             <p>Basement</p>
-            <button class="floor-dropdown">
-                <span>B1</span>
-                <span>&#9650;</span>
-            </button>
+            <select class="floor-dropdown">
+                <option value="b1">B1</option>
+                <option value="b2">B2</option>
+                <option value="b3">B3</option>
+            </select>
         </div>
 
         <div class="legend-controls">

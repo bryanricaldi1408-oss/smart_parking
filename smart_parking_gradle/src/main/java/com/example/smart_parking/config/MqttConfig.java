@@ -11,14 +11,20 @@ import org.springframework.integration.mqtt.inbound.MqttPahoMessageDrivenChannel
 import org.springframework.integration.mqtt.support.DefaultPahoMessageConverter;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
+import org.springframework.beans.factory.annotation.Value;
 import com.example.smart_parking.service.MqttWebSocketService;
 
 @Configuration
 public class MqttConfig {
 
-    private final String brokerUrl = ""; // ini apaaaa
-    private final String clientId = "SpringMQTTReceiver";
-    private final String topic = "#"; // terima semua topic
+    @Value("${mqtt.broker.url}")
+    private String brokerUrl;
+
+    @Value("${mqtt.client.id}")
+    private String clientId;
+
+    @Value("${mqtt.default.topic}")
+    private String topic;
 
     @Bean
     public MqttConnectOptions mqttConnectOptions() {

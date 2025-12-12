@@ -1,26 +1,16 @@
 package com.example.smart_parking.service;
 
-import org.springframework.stereotype.Service;
-import org.springframework.web.socket.TextMessage;
 import com.example.smart_parking.websocket.MqttWebSocketHandler;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class MqttWebSocketService {
 
+    @Autowired
+    private MqttWebSocketHandler webSocketHandler;
+
     public void broadcast(String topic, String payload) {
-
-        String json = """
-                {
-                    "topic": "%s",
-                    "mqtt": "%s"
-                }
-                """.formatted(topic, payload);
-
-        MqttWebSocketHandler.sessions.forEach(session -> {
-            try {
-                session.sendMessage(new TextMessage(json));
-            } catch (Exception ignored) {
-            }
-        });
+        webSocketHandler.broadcast(topic, payload);
     }
 }
